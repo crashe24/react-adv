@@ -1,4 +1,4 @@
-const LazyPage3 = () => {
+export const LazyPage3 = () => {
   return (
     <h1>
       LazyPage3
