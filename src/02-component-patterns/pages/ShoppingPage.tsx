@@ -1,5 +1,6 @@
 import { ProductButtons, ProductImage, ProductTitle } from "../components"
 import ProductCard from "../components/ProductCard"
+import '../styles/custom-styles.css'
 
 const product = {
   id: '1',
@@ -8,7 +9,7 @@ const product = {
 }
 const ShoppingPage = () => {
   return (
-    <div>
+    <div className="bg-dark">
         <h1>
           ShoppingPage
         </h1>
@@ -16,24 +17,24 @@ const ShoppingPage = () => {
         <div style={{
           display: 'flex', flexDirection:'row',flexWrap:'wrap'
         }}>
-          {/* <ProductCard product={product} >
-            <ProductImage  />
-            <ProductTitle title="" />
-            <ProductActionsButtons counter={0} increassedBy={function (value: number): void {
-            throw new Error("Function not implemented.")
-          } }  />
+        
+          <ProductCard product={product} className="bg-dark text-bold">
+            <ProductCard.Image  className="custom-image"/>
+            <ProductCard.Title className="text-white"/>
+            <ProductCard.Buttons className= "custom-buttons"  /> 
+          </ProductCard>
 
-          </ProductCard> */}
-          <ProductCard product={product} >
-            <ProductCard.Image  />
-            <ProductCard.Title title="" />
-            <ProductCard.Buttons  /> 
+          <ProductCard product={product}   className="bg-dark text-bold">
+            <ProductImage className="custom-image" />
+            <ProductTitle className="text-white"/>
+            <ProductButtons  className = "custom-buttons"/>
 
           </ProductCard>
-          <ProductCard product={product} >
-            <ProductImage  />
-            <ProductTitle title="" />
-            <ProductButtons  />
+
+          <ProductCard product={product} style={{background:'#70d1f8'}}>
+            <ProductImage />
+            <ProductTitle />
+            <ProductButtons/>
 
           </ProductCard>
           
