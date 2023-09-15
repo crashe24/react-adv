@@ -1,6 +1,11 @@
 import { useState } from "react"
 import { Product } from "../interfaces/Product.interfaces"
 
+
+interface ProductInCart extends Product {
+    count: number
+  }
+  
 export const useShoppingCart = () => {
 
   const [shoppingCart, setShoppingCart] = useState<{[key:string]: ProductInCart}> ({})
