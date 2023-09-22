@@ -1,0 +1,49 @@
+[
+    {
+        "type":"input",
+        "name":"firstName",
+        "placeHolder":"Jorge",
+        "label":"First Name",
+        "value":"",
+        "validations":[
+            {"type":"required"},
+            {"type":"minlength", "values":"5"}
+        ]
+    },
+    {
+        "type":"input",
+        "name":"lastName",
+        "placeHolder":"Leon",
+        "label":"Last Name",
+        "value":"",
+        "validations":[
+            {"type":"required"}
+        ]
+    },
+    {
+        "type":"email",
+        "name":"email",
+        "placeHolder":"jleon@gmail.com ",
+        "label":"Email",
+        "value":"",
+        "validations":[
+            {"type":"required"},
+            {"type":"email"}
+        ]
+    },
+    {
+        "type":"select",
+        "name":"favoriteGame",
+        "label":"Favorite Game",
+        "value":"",
+        "options": [
+            {"id":"1","label":"supersamsh"},
+            {"id":"2","label":"metal solid"},
+            {"id":"3","label":"resident Evil"}
+        ],
+        "validations":[
+            {"type":"required"}
+        ]
+    }
+]
+

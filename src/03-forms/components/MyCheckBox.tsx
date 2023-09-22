@@ -7,7 +7,7 @@ interface Props {
 }
 export const MyCheckBox = ({label, ...props}: Props) => {
 
-  const [field, meta] = useField({...props, type: 'checkbox'})
+  const [field] = useField({...props, type: 'checkbox'})
   return (
     <>
                 <label >
@@ -15,11 +15,7 @@ export const MyCheckBox = ({label, ...props}: Props) => {
                   {label}
                   </label>
                   <ErrorMessage name={ props.name } component={'span'}/>
-                {/* {
-                meta.touched && meta.error &&(
-                    <span className="error">{meta.error}</span>
-                )
-                } */}
+                
                 
     </>
   );
